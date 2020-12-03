@@ -30,7 +30,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install platformio
     - name: Run PlatformIO build
-      run: pio run --project-dir ./tracker
+      run: pio run -e esp32devOTA --project-dir ./tracker
 
     - name: Upload binaries to release
       uses: svenstaro/upload-release-action@v1-release
