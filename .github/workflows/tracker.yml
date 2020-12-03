@@ -17,7 +17,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install platformio
     - name: Run PlatformIO build
-      run: pio run --project-dir ./tracker
+      run: pio run -t buildfs --project-dir ./tracker
 
     - name: Upload binaries to release
       uses: svenstaro/upload-release-action@v1-release
